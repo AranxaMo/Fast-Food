@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/5abd5c8a2f.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-300">
+    <nav x-data="{ open: false }" class="fixed w-full z-10 bg-secondary text-gray-100">
+        <div class="bg-secondary px-2 text-white flex justify-between items-center">
+            <div> <img class="h-16" src="./images/logo.png" alt=""></div>
+            <div @click="open = true" class="text-4xl cursor-pointer">&equiv;</div>
+        </div>
+        <div x-show="open" @click.outside="open = false">
+            <div class="mx-4 my-4">
+                <input class="form-control" type="search" name="" id="" placeholder=" Búsqueda">
+            </div>
+            <div class="py-2 mx-2 sm:flex justify-around items-center">
+                <div class="flex">
+                    Precio:
+                    <div class="ml-2">$</div>
+                    <div class="ml-2 text-primary">$$</div>
+                    <div class="ml-2">$$$</div>
+                    <div class="ml-2">$$$$</div>
+                </div>
+                <div class="flex">
+                    <h3>Calificación:</h3> 
+                    <div class="ml-2 text-primary">&starf;</div>
+                    <div class="text-primary">&starf;</div>
+                    <div class="text-primary">&starf;</div>
+                    <div class="text-primary">&starf;</div>
+                    <div>&star;</div>
+                </div>
+                <div>
+                    <button class="bg-primary rounded text-yellow-800 px-6 py-2">Filtar</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="h-52 sm:h-96 bg-cover bg-no-repeat bg-center" style="background-image: url(https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);">
+        </div>
+
+        <div class="mx-7 mt-4 lg:grid lg:grid-cols-2 lg:gap-6 ">
+            <div class="sm:flex mt-4 items-center sm:bg-white rounded-lg">
+                <div>
+                    <img class="w-full rounded-lg sm:rounded-r-none object-contain" src="https://images.unsplash.com/photo-1542574271-7f3b92e6c821?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+                </div>
+                
+                <div class="bg-white lg:w-2/3 rounded-lg relative shadow-lg mx-2 -mt-2 p-2 sm:bg-transparent sm:shadow-none">
+                    <h2 class="text-xl tracking-thight font-semibold text-gray-800 uppercase md:text-2xl">Hamburguesa Doble Chipotle</h2>
+                    <p class="mt-2 text-gray-600 leading-snug">Hamburguesa con dos jugosas carnes de res, acompañada de doble queso amarrillo, pepinillos, tomate, lechuga, cebolla caramelizada y nuestra riquisima salsa especial de chipotle</p>
+                    <div class="text-sm font-semibold text-gray-700 mt-2 md:text-base">$85 MXN</div>
+                    <div class="mt-2 font-semibold text-yellow-500 text-sm md:text-base">&starf;&starf;&starf;&starf;&star; / 36 Reseñas</div>
+                </div>
+            </div>  <!--CARD-->
+            
+            <div class="sm:flex mt-4 items-center sm:bg-white rounded-lg">
+                <div>
+                    <img class="w-full rounded-lg sm:rounded-r-none object-contain" src="https://images.unsplash.com/photo-1638368593249-7cadb261e8b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=391&q=80" alt="">
+                </div>
+                
+                <div class="bg-white lg:w-2/3 rounded-lg relative shadow-lg mx-2 -mt-2 p-2 sm:bg-transparent sm:shadow-none">
+                    <h2 class="text-xl tracking-thight font-semibold text-gray-800 uppercase md:text-2xl">Combo Hot Dogs & Papas</h2>
+                    <p class="mt-2 text-gray-600 leading-snug">Hot Dog clásico, con tomate, jalapeños, lechuga y queso, acompañado de una rica porción de papas a la francesa</p>
+                    <div class="text-sm font-semibold text-gray-700 mt-2 md:text-base">$65 MXN</div>
+                    <div class="mt-2 font-semibold text-yellow-500 text-sm md:text-base">&starf;&starf;&starf;&starf;&star; / 40 Reseñas</div>
+                </div>
+            </div>  <!--CARD-->
+            <div class="sm:flex mt-4 items-center sm:bg-white rounded-lg">
+                <div>
+                    <img class="w-full rounded-lg sm:rounded-r-none object-contain" src="https://images.unsplash.com/photo-1542574271-7f3b92e6c821?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+                </div>
+                
+                <div class="bg-white lg:w-2/3 rounded-lg relative shadow-lg mx-2 -mt-2 p-2 sm:bg-transparent sm:shadow-none">
+                    <h2 class="text-xl tracking-thight font-semibold text-gray-800 uppercase md:text-2xl">Hamburguesa Doble Chipotle</h2>
+                    <p class="mt-2 text-gray-600 leading-snug">Hamburguesa con dos jugosas carnes de res, acompañada de doble queso amarrillo, pepinillos, tomate, lechuga, cebolla caramelizada y nuestra riquisima salsa especial de chipotle</p>
+                    <div class="text-sm font-semibold text-gray-700 mt-2 md:text-base">$85 MXN</div>
+                    <div class="mt-2 font-semibold text-yellow-500 text-sm md:text-base">&starf;&starf;&starf;&starf;&star; / 36 Reseñas</div>
+                </div>
+            </div>  <!--CARD-->
+            
+            <div class="sm:flex mt-4 items-center sm:bg-white rounded-lg">
+                <div>
+                    <img class="w-full rounded-lg sm:rounded-r-none object-contain" src="https://images.unsplash.com/photo-1638368593249-7cadb261e8b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=391&q=80" alt="">
+                </div>
+                
+                <div class="bg-white lg:w-2/3 rounded-lg relative shadow-lg mx-2 -mt-2 p-2 sm:bg-transparent sm:shadow-none">
+                    <h2 class="text-xl tracking-thight font-semibold text-gray-800 uppercase md:text-2xl">Combo Hot Dogs & Papas</h2>
+                    <p class="mt-2 text-gray-600 leading-snug">Hot Dog clásico, con tomate, jalapeños, lechuga y queso, acompañado de una rica porción de papas a la francesa</p>
+                    <div class="text-sm font-semibold text-gray-700 mt-2 md:text-base">$65 MXN</div>
+                    <div class="mt-2 font-semibold text-yellow-500 text-sm md:text-base">&starf;&starf;&starf;&starf;&star; / 40 Reseñas</div>
+                </div>
+            </div>  <!--CARD-->
+            <div class="sm:flex mt-4 items-center sm:bg-white rounded-lg">
+                <div>
+                    <img class="w-full rounded-lg sm:rounded-r-none object-contain" src="https://images.unsplash.com/photo-1542574271-7f3b92e6c821?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+                </div>
+                
+                <div class="bg-white lg:w-2/3 rounded-lg relative shadow-lg mx-2 -mt-2 p-2 sm:bg-transparent sm:shadow-none">
+                    <h2 class="text-xl tracking-thight font-semibold text-gray-800 uppercase md:text-2xl">Hamburguesa Doble Chipotle</h2>
+                    <p class="mt-2 text-gray-600 leading-snug">Hamburguesa con dos jugosas carnes de res, acompañada de doble queso amarrillo, pepinillos, tomate, lechuga, cebolla caramelizada y nuestra riquisima salsa especial de chipotle</p>
+                    <div class="text-sm font-semibold text-gray-700 mt-2 md:text-base">$85 MXN</div>
+                    <div class="mt-2 font-semibold text-yellow-500 text-sm md:text-base">&starf;&starf;&starf;&starf;&star; / 36 Reseñas</div>
+                </div>
+            </div>  <!--CARD-->
+            
+            <div class="sm:flex mt-4 items-center sm:bg-white rounded-lg">
+                <div>
+                    <img class="w-full rounded-lg sm:rounded-r-none object-contain" src="https://images.unsplash.com/photo-1638368593249-7cadb261e8b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=391&q=80" alt="">
+                </div>
+                
+                <div class="bg-white lg:w-2/3 rounded-lg relative shadow-lg mx-2 -mt-2 p-2 sm:bg-transparent sm:shadow-none">
+                    <h2 class="text-xl tracking-thight font-semibold text-gray-800 uppercase md:text-2xl">Combo Hot Dogs & Papas</h2>
+                    <p class="mt-2 text-gray-600 leading-snug">Hot Dog clásico, con tomate, jalapeños, lechuga y queso, acompañado de una rica porción de papas a la francesa</p>
+                    <div class="text-sm font-semibold text-gray-700 mt-2 md:text-base">$65 MXN</div>
+                    <div class="mt-2 font-semibold text-yellow-500 text-sm md:text-base">&starf;&starf;&starf;&starf;&star; / 40 Reseñas</div>
+                </div>
+            </div>  <!--CARD-->
+
+            
+        </div>  <!--CARDS CONTAINER-->
+
+
+        <form class="m-7 bg-white p-4 rounded-lg lg:w-2/3 lg:mx-auto">
+            <h2 class="text-gray-800 text-2xl text-center">Contacto</h2>
+            <label for="name">Nombre</label>
+            <input class="form-control hover:bg-white" type="text" placeholder=" Nombre" name="" id="name">
+
+            <label for="email">Email</label>
+            <input class="form-control hover:bg-white" type="email" placeholder=" Email" name="" id="email">
+
+            <label for="message">Mensaje</label>
+            <textarea class="form-control hover:bg-white" name="" id="message" cols="30" rows="10" placeholder=" Escribe un mensaje"></textarea>
+
+            <button class="shadow-xl text-white rounded-md mt-2 py-2 w-full bg-gray-500 mx-auto block hover:bg-primary hover:text-secondary" type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <footer class="mt-4 py-4 w-full bg-secondary text-white">
+        <div class="sm:flex md:flex-row-reverse justify-around">
+            <div class="ml-8 mt-4 md:flex ">
+                <div class="hover:text-primary cursor-pointer mr-3"><i class="fa-brands fa-facebook-f"></i> Facebook</div>
+                <div class="hover:text-primary cursor-pointer mr-3"><i class="fa-brands fa-twitter"></i> Twitter</div>
+                <div class="hover:text-primary cursor-pointer"><i class="fa-brands fa-instagram"></i> Instagram</div>
+            </div>
+            <ul class="ml-8 mt-4">
+                <li class="hover:underline cursor-pointer">Soporte</li>
+                <li class="hover:underline cursor-pointer">Acerca de nosotros</li>
+                <li class="hover:underline cursor-pointer">Registro</li>
+                <li class="hover:underline cursor-pointer">Aviso de Privacidad</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
